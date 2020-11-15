@@ -35,15 +35,44 @@ Dados -> Resources seria então, uma entidade, um objeto.
 
 - _Cacheable_: As respostas para uma requisição, deverão ser explicitas ao dizer se aquela requisição, pode ou não ser cacheada pelo cliente.
  
-- _Layered System_: 
+- _Layered System_: O cliente acessa a um endpoint, sem precisar saber da complexidade, de quais passos estão sendo necessários para o servidor responder a requisição, ou quais outras camadas o servidor estará lidando, para que a requisição seja respondida.
 
-
-
-
-
-
-
+- _Code on demand (optional)_: Dá a possibilidade da nossa aplicação pegar códigos, como o JS, por exemplo, executar no cliente.
 
 ## RESTFUL 
 
 RESTFUL, é cumprir os padões REST. É a aplicação dos padrões REST.
+
+## Verbos HTTP
+
+- GET -> Recebe dados de um resource
+- POST -> Envia dados ou informações para serem processados por um resource
+- PUT -> Atualiza os dados de um resource
+-  DELETE -> Deleta um resource
+
+=> RESOURCE => CLIENTE. É OS BLOQUINHOS DE NOTA.
+
+## Boas praticas
+
+- Utilizar verbos HTTP para as requisições
+- Não utilizar barras no final do endpoint
+- Utilizar plural ou singular na criação dos endpoints? _NÃO IMPORTA!_ use um padrão!!
+- Nunca deixar o cliente sem resposta
+
+## JSON(Fake users)
+
+- http://jsonplaceholder.typicode.com/users
+
+### STATUS DAS RESPOSTAS
+
+- 1xx: Informação;
+- 2xx: Sucesso;
+  - 200: OK;
+  - 201: Created;
+  - 204: Não tem conteúdo PUT, POST, DELETE
+- 3xx: Redirection
+- 4xx: Client Error
+  - 400: Bad request
+  - 404: Not Found
+- 5xx: Server Error
+  - 500: Internal Server Error  
